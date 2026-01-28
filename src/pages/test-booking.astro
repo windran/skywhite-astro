@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RentButton from '../components/CarDetail/RentButton.svelte';
+---
+
+<BaseLayout title="Test Booking Modal">
+  <div style="padding: 2rem; max-width: 1200px; margin: 0 auto;">
+    <h1>🚗 Test Booking Modal Sky White Car</h1>
+    <p>Klik tombol di bawah untuk test modal booking:</p>
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin: 3rem 0;">
+      <!-- Button 1 -->
+      <RentButton 
+        client:load
+        car={{
+          name: 'Suzuki Ertiga Hybrid 2024',
+          price: 450000,
+          image: '/images/car-placeholder.jpg',
+          slug: 'suzuki-ertiga-hybrid'
+        }}
+        style="primary"
+      />
+      
+      <!-- Button 2 -->
+      <RentButton 
+        client:load
+        car={{
+          name: 'Toyota Avanza 2024',
+          price: 350000,
+          slug: 'toyota-avanza'
+        }}
+        style="secondary"
+      />
+      
+      <!-- Button 3 -->
+      <RentButton 
+        client:load
+        car={{
+          name: 'Honda Brio RS',
+          price: 300000
+        }}
+        style="outline"
+      />
+    </div>
+    
+    <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 3rem;">
+      <h3>✅ Test Checklist:</h3>
+      <ul>
+        <li>Klik tombol → Modal harus terbuka</li>
+        <li>Form dengan data mobil terisi otomatis</li>
+        <li>Pilih lokasi, tanggal mulai & selesai</li>
+        <li>Isi nama & WhatsApp</li>
+        <li>Klik "Lanjutkan ke WhatsApp"</li>
+        <li>WhatsApp terbuka dengan pesan terformat</li>
+        <li>ESC key atau klik X untuk close modal</li>
+        <li>Klik di luar modal untuk close</li>
+      </ul>
+      
+      <h3 style="margin-top: 2rem;">⚠️ Troubleshooting:</h3>
+      <ul>
+        <li>Jika modal tidak terbuka: Refresh halaman</li>
+        <li>Cek console (F12) untuk error messages</li>
+        <li>Pastikan dev server running: <code>npm run dev</code></li>
+      </ul>
+    </div>
+  </div>
+</BaseLayout>

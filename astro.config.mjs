@@ -1,7 +1,13 @@
 import { defineConfig } from 'astro/config';
 import svelte from '@astrojs/svelte';
-import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  integrations: [svelte(), tailwind()]
+  integrations: [
+    svelte({
+      compilerOptions: {
+        // Nonaktifkan TypeScript strict mode
+        enableSourcemap: true,
+      }
+    })
+  ]
 });
