@@ -1,0 +1,219 @@
+---
+// No JavaScript needed
+---
+
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Sewa Mobil <span class="hero-highlight">Premium</span>
+        <br />Untuk Perjalanan Anda
+      </h1>
+      
+      <p class="hero-description">
+        Sky White Car menyediakan armada terbaik dengan pelayanan prima.
+        Nikmati kenyamanan berkendara dengan mobil-mobil pilihan kami.
+      </p>
+      
+      <div class="hero-buttons">
+        <a href="/reservation" class="btn btn-primary">
+          Booking Sekarang
+        </a>
+        <a href="/fleet" class="btn btn-secondary">
+          Lihat Armada
+        </a>
+      </div>
+    </div>
+    
+    <!-- Hero Image/Decoration -->
+    <div class="hero-decoration">
+      <div class="decoration-circle"></div>
+      <div class="decoration-circle"></div>
+      <div class="decoration-circle"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* HERO STYLES */
+  .hero {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Q50,80 0,100 Z" fill="%230ea5e9" opacity="0.05"/></svg>');
+    background-size: cover;
+    background-position: left;
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content {
+    max-width: 600px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-highlight {
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+  }
+
+  .hero-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0ea5e9, #0284c7);
+    border-radius: 2px;
+    opacity: 0.3;
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    color: white;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
+  }
+
+  .btn-secondary {
+    background: white;
+    color: #0ea5e9;
+    border-color: #cbd5e1;
+  }
+
+  .btn-secondary:hover {
+    border-color: #0ea5e9;
+    color: #0284c7;
+    transform: translateY(-3px);
+  }
+
+  .hero-decoration {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 400px;
+    height: 400px;
+    pointer-events: none;
+  }
+
+  .decoration-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    opacity: 0.1;
+  }
+
+  .decoration-circle:nth-child(1) {
+    width: 300px;
+    height: 300px;
+    top: 0;
+    right: 0;
+  }
+
+  .decoration-circle:nth-child(2) {
+    width: 200px;
+    height: 200px;
+    bottom: 0;
+    left: 50px;
+    opacity: 0.05;
+  }
+
+  .decoration-circle:nth-child(3) {
+    width: 150px;
+    height: 150px;
+    top: 100px;
+    left: 0;
+    opacity: 0.03;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .hero-decoration {
+      display: none;
+    }
+    
+    .hero-content {
+      text-align: center;
+      margin: 0 auto;
+    }
+    
+    .hero-buttons {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 3rem 0;
+    }
+    
+    .hero-title {
+      font-size: 2.25rem;
+    }
+    
+    .hero-description {
+      font-size: 1rem;
+    }
+    
+    .btn {
+      padding: 0.875rem 1.75rem;
+    }
+  }
+</style>

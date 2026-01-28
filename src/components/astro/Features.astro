@@ -1,0 +1,167 @@
+---
+// No JavaScript needed
+---
+
+<section class="features">
+  <div class="features-container">
+    <div class="features-header">
+      <h2 class="features-title">Kenapa Memilih Kami?</h2>
+      <p class="features-subtitle">
+        Kami memberikan pengalaman terbaik dalam penyewaan mobil premium
+      </p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🚗</div>
+        <h3 class="feature-title">Armada Terawat</h3>
+        <p class="feature-description">
+          Mobil selalu dalam kondisi prima dengan perawatan rutin
+        </p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h3 class="feature-title">Harga Terjangkau</h3>
+        <p class="feature-description">
+          Harga kompetitif dengan kualitas premium tanpa biaya tersembunyi
+        </p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3 class="feature-title">Asuransi Lengkap</h3>
+        <p class="feature-description">
+          Perlindungan komprehensif untuk keamanan dan kenyamanan Anda
+        </p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">👨‍✈️</div>
+        <h3 class="feature-title">Supir Profesional</h3>
+        <p class="feature-description">
+          Supir berpengalaman dan ramah untuk perjalanan Anda
+        </p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">⏱️</div>
+        <h3 class="feature-title">24/7 Support</h3>
+        <p class="feature-description">
+          Tim support siap membantu kapan saja Anda membutuhkan
+        </p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">📍</div>
+        <h3 class="feature-title">Flexible Pickup</h3>
+        <p class="feature-description">
+          Penjemputan fleksibel di berbagai lokasi sesuai kebutuhan
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* FEATURES STYLES */
+  .features {
+    padding: 5rem 0;
+    background: white;
+  }
+
+  .features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .features-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .features-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+  }
+
+  .features-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #0ea5e9, #0284c7);
+    border-radius: 2px;
+  }
+
+  .features-subtitle {
+    font-size: 1.125rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-card {
+    background: #f8fafc;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(14, 165, 233, 0.1);
+    border-color: #bae6fd;
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+  }
+
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-description {
+    color: #64748b;
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .features {
+      padding: 3rem 0;
+    }
+    
+    .features-title {
+      font-size: 2rem;
+    }
+    
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
